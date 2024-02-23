@@ -60,11 +60,8 @@ const HomePage = () => {
 
         <div className="mt-20 grid grid-cols-2 max-md:bg-fuchsia-200 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto sm:max-w-xl lg:max-w-3xl xl:max-w-5xl">
           {store.map((store) => (
-            <Link
-              to={`/product/${store.nombre}`}
-              key={store.id}
-              target="_blank"
-            >
+            // target="_blank"
+            <Link to={`/product/${store.id}`} key={store.id}>
               <div className="bg-white shadow rounded overflow-hidden ">
                 <div className="">
                   <img
