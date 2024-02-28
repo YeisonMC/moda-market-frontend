@@ -1,0 +1,15 @@
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+summary::after {
+  content: "▼";
+}
+
+.prueba {
+  display: grid;
+  grid-template-columns: 25% 73%;
+  margin-top: 25px;
+  column-gap: 20px;
+}

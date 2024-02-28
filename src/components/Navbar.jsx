@@ -81,43 +81,43 @@ const Navbar = () => {
 
           <ul className="flex gap-10 max-md:absolute max-md:top-full max-md:left-0 max-md:w-full max-md:bg-white max-md:block">
             <li className="max-md:mx-4 max-md:my-2">
-              <a href="/" className="text-black">
-                Inicio
-              </a>
-            </li>
-            <li className="max-md:mx-4 max-md:my-2">
-              <a href="/pages/home" className="text-black">
-                Tienda
-              </a>
-            </li>
-            <li className="max-md:mx-4 max-md:my-2">
-              <a href="#" className="text-black">
-                Ofertas
-              </a>
-            </li>
-            <li className="max-md:mx-4 max-md:my-2">
-              <a href="#" className="text-black">
-                Novedades
-              </a>
-            </li>
-            <li className="max-md:mx-4 max-md:my-2">
-              <a href="#" className="text-black">
-                Contacto
-              </a>
-            </li>
-            <li className="max-md:mx-4 max-md:my-2">
-              <NavLink to="/admin/createproductform" className="text-black">
-                Crear
+              <NavLink to="/womanpage" className="text-black">
+                Mujer
               </NavLink>
             </li>
             <li className="max-md:mx-4 max-md:my-2">
+              <NavLink to="/manpage" className="text-black">
+                Hombre
+              </NavLink>
+            </li>
+            <li className="max-md:mx-4 max-md:my-2">
+              <NavLink to="/kidspage" className="text-black">
+                Niños
+              </NavLink>
+            </li>
+            <li className="max-md:mx-4 max-md:my-2">
+              <NavLink to="#" className="text-black">
+                Promociones
+              </NavLink>
+            </li>
+            <li className="max-md:mx-4 max-md:my-2">
+              <NavLink to="#" className="text-black">
+                Contacto
+              </NavLink>
+            </li>
+            {/* <li className="max-md:mx-4 max-md:my-2">
+              <NavLink to="/admin/createproductform" className="text-black">
+                Crear
+              </NavLink>
+            </li> */}
+            {/* <li className="max-md:mx-4 max-md:my-2">
               <NavLink
                 to="https://moda-market-production.up.railway.app/modamarket/store/home/"
                 className="text-black"
               >
                 API product
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
       </header>

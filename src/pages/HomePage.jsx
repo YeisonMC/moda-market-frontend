@@ -48,7 +48,8 @@ const HomePage = () => {
           <div className="h-screen">adsa</div>
         </div> */}
 
-      <div className="mt-16 w-11/12 max-w-screen-2xl mx-auto">
+      <div className="">
+        {/* <div className="mt-16 w-11/12 max-w-screen-2xl mx-auto"> */}
         <div className="text-center">
           <h1 className="font-extrabold text-3xl">La Colección De La Semana</h1>
           <p className="mt-4 md:w-7/12 mx-auto">
@@ -57,12 +58,12 @@ const HomePage = () => {
             último en moda y las tendencias del momento.
           </p>
         </div>
-
+        <h1> {store.length}</h1>
         <div className="mt-20 grid grid-cols-2 max-md:bg-fuchsia-200 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto sm:max-w-xl lg:max-w-3xl xl:max-w-5xl">
           {store.map((store) => (
             // target="_blank"
             <Link to={`/product/${store.id}`} key={store.id}>
-              <div className="bg-white shadow rounded overflow-hidden ">
+              <div className="bg-white shadow rounded overflow-hidden">
                 <div className="">
                   <img
                     className="w-full"
