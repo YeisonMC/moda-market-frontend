@@ -48,7 +48,7 @@ const HomePage = () => {
           <div className="h-screen">adsa</div>
         </div> */}
 
-      <div className="">
+      <div className="pt-10">
         {/* <div className="mt-16 w-11/12 max-w-screen-2xl mx-auto"> */}
         <div className="text-center">
           <h1 className="font-extrabold text-3xl">La Colección De La Semana</h1>

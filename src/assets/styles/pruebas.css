@@ -2,14 +2,57 @@ summary {
   list-style: none;
   cursor: pointer;
 }
-
+/* 
 summary::after {
   content: "▼";
-}
+} */
 
 .prueba {
   display: grid;
   grid-template-columns: 25% 73%;
   margin-top: 25px;
   column-gap: 20px;
+}
+
+/* .pruebas-box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #aaa;
+  position: absolute;
+}
+
+.pruebas-box:checked {
+  background-color: black;
+}
+
+.pruebas-box::before {
+  content: "✓";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 3px;
+  font-size: 10px;
+  font-weight: 700;
+} */
+
+.pruebas-box {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pruebas-box.checked {
+  background-color: black;
+  color: white;
+}
+
+.pruebas-box.checked::after {
+  content: "✓";
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
 }
