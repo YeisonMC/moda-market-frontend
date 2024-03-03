@@ -69,6 +69,7 @@ const WomanPageId = () => {
               <div className="mt-2 mb-6">
                 <input className="hidden" type="radio" />
                 <button
+                  name="boton"
                   id="jiija"
                   onClick={ClickLabelBgColor}
                   className={`mr-2 w-14 h-14 border border-[#C6C6C6] rounded-lg cursor-pointer  hover:bg-black hover:text-white ${
@@ -79,6 +80,7 @@ const WomanPageId = () => {
                 </button>
                 <input className="hidden" type="radio" />
                 <button
+                  name="boton"
                   id="jiija"
                   onClick={ClickLabelBgColor}
                   className={`mr-2 w-14 h-14 border border-[#C6C6C6] rounded-lg cursor-pointer  hover:bg-black hover:text-white ${
@@ -89,6 +91,7 @@ const WomanPageId = () => {
                 </button>
                 <input className="hidden" type="radio" />
                 <button
+                  name="boton"
                   id="jiija"
                   onClick={ClickLabelBgColor}
                   className={`mr-2 w-14 h-14 border border-[#C6C6C6] rounded-lg cursor-pointer  hover:bg-black hover:text-white ${
