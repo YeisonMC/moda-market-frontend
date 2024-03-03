@@ -101,3 +101,31 @@ ul li a::before {
 ul li a:hover::before {
   width: 100%;
 }
+
+/* .menu-expanded {
+  margin-top: 1em;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  height: 0;
+  max-height: 0;
+  overflow: hidden;
+  background-color: white;
+  transition: 200ms height ease-in-out;
+  transition: max-height 0.2s ease-out, opacity 0.1s linear;
+  opacity: 0;
+}
+
+.show {
+  display: block;
+  height: auto;
+  max-height: 300px;
+  overflow: auto;
+  transition: max-height 2s ease-out, opacity 0.3s linear;
+  opacity: 1;
+}
+ */

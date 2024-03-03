@@ -9,15 +9,20 @@ import KidsPage from "./pages/kids/KidsPage.jsx";
 import ProductId from "./pages/ProductId";
 import CreateProductForm from "./pages/admin/CreateProductForm";
 import IconWhatsapp from "./assets/svg/whatsapp.svg";
+import WomanPageId from "./pages/woman/WomanPageId.jsx";
+import Breadcrumbs from "./components/Breadcrumbs.jsx";
 
 const App = () => {
   return (
     <>
       <Navbar />
       <div className="mt-20 w-11/12 max-w-screen-2xl mx-auto">
+        <Breadcrumbs />
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/product/:productId" element={<ProductId />} />
+
+          <Route path="/womanpageid" element={<WomanPageId />} />
           <Route
             path="/admin/createproductform"
             element={<CreateProductForm />}

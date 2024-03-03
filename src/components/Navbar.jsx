@@ -38,10 +38,24 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="max-md:mx-4 max-md:my-2">
-              <NavLink to="/manpage" className="text-black">
+              {/*onClick={toggleMenu}*/}
+              <NavLink to={"/manpage"} className="text-black">
                 Hombre
               </NavLink>
+              {/* <div className={`menu-expanded  ${menuOpen ? "show" : ""}`}>
+                <div className="p-10">
+                  <ul className="xd">
+                    <li>
+                      <a href="">Polos</a>
+                    </li>
+                    <li>
+                      <a href="">Pantalones</a>
+                    </li>
+                  </ul>
+                </div>
+              </div> */}
             </li>
+
             <li className="max-md:mx-4 max-md:my-2">
               <NavLink to="/kidspage" className="text-black">
                 Niños
@@ -57,9 +71,9 @@ const Navbar = () => {
                 Contacto
               </NavLink>
             </li>
-            <div class="flex leading-7 items-center relative max-w-[190px]">
+            <div className="flex leading-7 items-center relative max-w-[190px]">
               <svg
-                class="icon absolute left-4 fill-[#9e9ea7] w-5 h-5"
+                className="icon absolute left-4 fill-[#9e9ea7] w-5 h-5"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
               >
@@ -70,7 +84,7 @@ const Navbar = () => {
               {/*h10*/}
               <input
                 type="search"
-                class="input w-full h-10 leading-7 py-0 px-4 pl-11 rounded-lg outline-none bg-[#f3f3f4] text-[#0d0c22] text-sm"
+                className="input w-full h-10 leading-7 py-0 px-4 pl-11 rounded-lg outline-none bg-[#f3f3f4] text-[#0d0c22] text-sm"
                 placeholder="Buscar productos.."
               />
             </div>
@@ -79,19 +93,19 @@ const Navbar = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="w-8 h-8"
+                className="w-8 h-8"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="w-8 h-8"
+                className="w-8 h-8"
               >
                 <path d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
               </svg>

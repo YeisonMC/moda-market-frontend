@@ -3,13 +3,14 @@ import "../../assets/styles/pruebas.css";
 import Checked from "./components/filters/Checked";
 import Summary from "./components/filters/Summary";
 import ChevronDown from "../../assets/svg/chevron-down.svg";
+import { Link } from "react-router-dom";
 
 const WomanPage = () => {
   return (
     <>
       {/* //!  p-4 xl:bg-blue-400 lg:bg-violet-200  sm:bg-red-500 bg-orange-400 APRENDER ESO QUE SON LOS TAMAÑOS */}
       <nav className="prueba max-lg:flex max-lg:flex-col pt-8">
-        <div className="px-4 py-2  max-md:px-0 max-md:mb-4 xl:bg-white lg:bg-white0  sm:bg-white bg-white">
+        <div className="px-4 py-2 max-md:px-0 max-md:mb-4 xl:bg-white lg:bg-white0  sm:bg-white bg-white">
           {/* //TODO: SE PONER name="info" PARA QUE SOLO SE PUEDA DAR UN SOLO DETAILS*/}
 
           <details>
@@ -63,7 +64,10 @@ const WomanPage = () => {
         <nav className="mx-auto">
           <h1 className="text-xl mb-2 font-semibold">100 productos</h1>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-md:gap-2 mx-auto">
-            <div className=" bg-white shadow-md hover:shadow-lg">
+            <Link
+              to={"/womanpageid"}
+              className=" bg-white shadow-md hover:shadow-lg"
+            >
               <img
                 className="w-full object-cover object-center"
                 src="https://topitop.vteximg.com.br/arquivos/ids/338576-302-385/1971824_2.jpg?v=638436321069130000"
@@ -89,7 +93,7 @@ const WomanPage = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
             <div className=" bg-white shadow-md hover:shadow-lg">
               <img
                 className="w-full object-cover object-center"

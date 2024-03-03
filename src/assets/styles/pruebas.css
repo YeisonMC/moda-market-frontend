@@ -56,3 +56,27 @@ summary::after {
   font-size: 12px;
   font-weight: 700;
 }
+
+.grid-prueba {
+  /* background: wheat; */
+  display: grid;
+  /* grid-template-columns: 42% 56%; */
+  grid-template-columns: 42% 54%;
+  margin-top: 25px;
+  /* column-gap: 20px; */
+  /* column-gap: 20px; */
+}
+
+.prueba-open {
+  background-color: black;
+  color: white;
+}
+
+.breadcrumbs > * {
+  display: inline-block;
+}
+
+.breadcrumbs .crumb::after {
+  content: "/";
+  margin: 0px 4px;
+}
