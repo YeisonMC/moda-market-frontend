@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../../assets/styles/pruebas.css";
 import Checked from "./components/filters/Checked";
 import ChevronDown from "../../assets/svg/chevron-down.svg";
-import ReactImageMagnify from "react-image-magnify";
 
 const WomanPageId = () => {
   const [ClickLabel, setClickLabel] = useState(false);
@@ -23,25 +22,6 @@ const WomanPageId = () => {
               className=" object-cover"
               src="https://topitop.vteximg.com.br/arquivos/ids/338575-1000-1248/1971824_1.jpg?v=638436321061030000"
             />
-            {/* <ReactImageMagnify
-              {...{
-                smallImage: {
-                  alt: "Wristwatch by Ted Baker London",
-                  isFluidWidth: true,
-
-                  src: "https://topitop.vteximg.com.br/arquivos/ids/338575-1000-1248/1971824_1.jpg?v=638436321061030000",
-                  sizes:
-                    "(max-width: 480px) 100vw, (max-width: 1200px) 30vw, 360px",
-                },
-                largeImage: {
-                  src: "https://topitop.vteximg.com.br/arquivos/ids/338575-1000-1248/1971824_1.jpg?v=638436321061030000",
-                  width: 50,
-                  height: 50,
-                },
-                // isHintEnabled: true,
-                lensStyle: { backgroundColor: "rgba(0,0,0,.6)" },
-              }}
-            /> */}
           </div>
           <div className="max-lg:mt-6 max-lg:px-0">
             <span className="uppercase">Marca</span>
