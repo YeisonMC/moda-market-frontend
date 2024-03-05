@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../assets/styles/pruebas.css";
 import Checked from "./components/filters/Checked";
 import ChevronDown from "../../assets/svg/chevron-down.svg";
+import HomeProductGet from "../../hooks/HomeProductGet";
 
 const WomanPageId = () => {
   const [ClickLabel, setClickLabel] = useState(false);
@@ -14,7 +15,6 @@ const WomanPageId = () => {
     <>
       <div className="mt-10 w-11/12 max-w-screen-xl mx-auto">
         {/* //!  p-4 xl:bg-blue-400 lg:bg-violet-200  sm:bg-red-500 bg-orange-400 APRENDER ESO QUE SON LOS TAMAÑOS */}
-
         <div className="grid-prueba justify-between max-lg:grid-cols-1">
           <div className="md:w-1/2  lg:w-11/12 xl:w-full max-lg:mx-auto">
             {/* <img src="https://topitop.vteximg.com.br/arquivos/ids/338576-302-385/1971824_2.jpg?v=638436321069130000" /> */}
@@ -147,6 +147,7 @@ const WomanPageId = () => {
             </div>
           </div>
         </div>
+        <HomeProductGet />
       </div>
     </>
   );

@@ -2,8 +2,18 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "../assets/styles/home.css";
+import HomeProductGet from "../hooks/HomeProductGet";
+import Skeleton from "./woman/Skeleton";
 
 const HomePage = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
+
   const [store, setStore] = useState([]);
 
   useEffect(() => {
@@ -17,39 +27,7 @@ const HomePage = () => {
 
   return (
     <>
-      {/* <div className="w-11/12 max-w-screen-2xl mx-auto bg-violet-400">
-          <div className="mt-20 grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-6">
-            {store.map((store) => (
-              <div className="max-w-64 max-md:max-w-56" key={store.id}>
-                <div class="rounded shadow-lg">
-                  <div className="w-full h-72 max-md:h-56">
-                    <img
-                      class="w-full h-full"
-                      src={store.imagen}
-                      alt="Sunset in the mountains"
-                    />
-                  </div>
-                  <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">{store.nombre}</div>
-                    <p class="text-gray-700 text-dispers">{store.descripcion}</p>
-                  </div>
-                  <div class="px-6 pt-2 pb-4 flex ">
-                    <a
-                      href="#"
-                      className="bg-black text-white rounded-lg py-2 text-center w-full"
-                    >
-                      Comprar
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="h-screen">adsa</div>
-        </div> */}
-
       <div className="pt-10">
-        {/* <div className="mt-16 w-11/12 max-w-screen-2xl mx-auto"> */}
         <div className="text-center">
           <h1 className="font-extrabold text-3xl">La Colección De La Semana</h1>
           <p className="mt-4 md:w-7/12 mx-auto">
@@ -58,38 +36,114 @@ const HomePage = () => {
             último en moda y las tendencias del momento.
           </p>
         </div>
-        <h1> {store.length}</h1>
-        <div className="mt-20 grid grid-cols-2 max-md:bg-fuchsia-200 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto sm:max-w-xl lg:max-w-3xl xl:max-w-5xl">
+        {/* <h1> {store.length}</h1> */}
+        {/* <div className="mt-8 grid grid-cols-2 max-md:bg-fuchsia-200 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto sm:max-w-xl lg:max-w-3xl xl:max-w-5xl">
           {store.map((store) => (
+            <div className="">
+              {loading ? (
+                <Skeleton />
+              ) : (
+                <Link to={`/product/${store.id}`} key={store.id}>
+                  <div className="bg-white shadow overflow-hidden h-full">
+                    <div className="">
+                      <img
+                        className="w-full"
+                        src={store.imagen}
+                        alt={store.nombre}
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-bold text-xl mb-2">{store.nombre}</h3>
+                      <p className="text-gray-500 text-sm text-dispers">
+                        {store.descripcion}
+                      </p>
+                      <p className="font-bold mt-2">{store.precio}</p>
+                    </div>
+                  </div>
+                </Link>
+              )}
+            </div>
             // target="_blank"
-            <Link to={`/product/${store.id}`} key={store.id}>
-              <div className="bg-white shadow rounded overflow-hidden">
-                <div className="">
-                  <img
-                    className="w-full"
-                    src={store.imagen}
-                    alt={store.nombre}
-                  />
-                </div>
-                {/* <div className="w-[248px] h-auto mx-auto">
-                    <img
-                      className="w-full"
-                      src={product.imagen}
-                      alt={product.nombre}
-                    />
-                  </div> */}
-                <div className="p-4">
-                  <h3 className="font-bold text-xl mb-2">{store.nombre}</h3>
-                  <p className="text-gray-500 text-sm text-dispers">
-                    {store.descripcion}
-                  </p>
-                  <p className="font-bold mt-2">{store.precio}</p>
-                </div>
-              </div>
-            </Link>
+          ))}
+        </div> */}
+        <div className="mt-8 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto sm:max-w-xl lg:max-w-3xl xl:max-w-5xl">
+          {store.map((store) => (
+            // <div className="flex">
+            <div className="">
+              {loading ? (
+                <Skeleton />
+              ) : (
+                <Link
+                  to={`/product/${store.id}`}
+                  key={store.id}
+                  className=""
+                  // className="flex-1"
+                >
+                  <div className="bg-white shadow overflow-hidden h-full flex flex-col justify-between">
+                    <div className="">
+                      <img
+                        className="w-full"
+                        src={store.imagen}
+                        alt={store.nombre}
+                      />
+                      <div className="px-4 py-2">
+                        <h3 className="font-bold text-xl">{store.nombre}</h3>
+                      </div>
+                    </div>
+                    <div className="px-4 mb-4">
+                      <p className="text-gray-500 text-sm text-dispers">
+                        {store.descripcion}
+                      </p>
+                      <p className="font-bold mt-2">S/. {store.precio}</p>
+                    </div>
+                  </div>
+                </Link>
+              )}
+            </div>
           ))}
         </div>
+
+        {/* <div className="mt-8 grid grid-cols-2 max-md:bg-fuchsia-200 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto sm:max-w-xl lg:max-w-3xl xl:max-w-5xl">
+          {store.map((store) => (
+            <div className="flex">
+              {loading ? (
+                <Skeleton />
+              ) : (
+                <Link
+                  to={`/product/${store.id}`}
+                  key={store.id}
+                  className="flex-1"
+                >
+                  <div className="bg-white shadow overflow-hidden h-full flex flex-col justify-between">
+                    <div>
+                      <div>
+                        <img
+                          className="w-full"
+                          src={store.imagen}
+                          alt={store.nombre}
+                        />
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-bold text-xl mb-2">
+                          {store.nombre}
+                        </h3>
+                        <p className="text-gray-500 text-sm text-dispers">
+                          {store.descripcion}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="p-4">
+                      <p className="font-bold">{store.precio}</p>
+                    </div>
+                  </div>
+                </Link>
+              )}
+            </div>
+          ))}
+        </div> */}
       </div>
+
+      {/* <div className="">{loading ? <Skeleton /> : <HomeProductGet />}</div> */}
     </>
   );
 };

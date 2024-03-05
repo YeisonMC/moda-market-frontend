@@ -78,7 +78,7 @@ const WomanPage = () => {
                   XIOMI
                 </h2>
                 <p className="mb-2 text-base text-gray-700">
-                  Polo Mujer Ingrid Cocoasddddddddddd
+                  Polo Mujer Ingrid
                 </p>
                 <div className="flex items-center">
                   <p className="mr-2 text-lg font-semibold text-gray-900  max-md:text-base">

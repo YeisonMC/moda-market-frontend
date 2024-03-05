@@ -4,3 +4,10 @@
   overflow: hidden;
   -webkit-line-clamp: 2;
 }
+
+.text-dispers-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+}
