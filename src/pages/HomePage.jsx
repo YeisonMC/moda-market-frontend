@@ -69,18 +69,17 @@ const HomePage = () => {
         <div className="mt-8 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto sm:max-w-xl lg:max-w-3xl xl:max-w-5xl">
           {store.map((store) => (
             // <div className="flex">
-            <div className="">
+            <div key={store.id}>
               {loading ? (
                 <Skeleton />
               ) : (
                 <Link
                   to={`/product/${store.id}`}
-                  key={store.id}
-                  className=""
+                  // key={store.id}
                   // className="flex-1"
                 >
                   <div className="bg-white shadow overflow-hidden h-full flex flex-col justify-between">
-                    <div className="">
+                    <div>
                       <img
                         className="w-full"
                         src={store.imagen}
