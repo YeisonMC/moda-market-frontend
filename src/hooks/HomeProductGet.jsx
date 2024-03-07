@@ -25,7 +25,7 @@ const HomeProductGet = () => {
           {store.map((store) => (
             // target="_blank"
             <Link to={`/product/${store.id}`} key={store.id}>
-              <div className="bg-white shadow overflow-hidden">
+              <div className="bg-white shadow overflow-hidden h-full">
                 <img
                   className="w-full "
                   src={store.imagen}
