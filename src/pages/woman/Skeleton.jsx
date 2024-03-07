@@ -23,7 +23,7 @@ const Skeleton = () => {
         <div className="h-3 bg-gray-300 rounded-full mb-3"></div>
       </div> */}
       <div className="border rounded shadow-xl">
-        <div className="relative h-72 w-full mb-4 flex justify-center items-center bg-gray-300 animate-pulse">
+        <div className=" h-72 w-full mb-4 flex justify-center items-center bg-gray-300 animate-pulse">
           <svg
             className="w-10 h-10 text-gray-200 dark:text-gray-600"
             aria-hidden="true"

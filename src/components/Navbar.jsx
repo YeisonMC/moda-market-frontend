@@ -13,7 +13,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <header className="absolute top-0 left-0 w-full z-10 bg-white shadow-md">
+      <header className="absolute top-0 left-0 w-full bg-white shadow-md">
         <div className="flex items-center justify-between mx-10 py-4 max-md:mx-4">
           <NavLink to="/">
             <img src={ModaMarket} alt="" />
@@ -115,24 +115,9 @@ const Navbar = () => {
                 </svg>
               </NavLink>
             </li>
-
-            {/* <li className="max-md:mx-4 max-md:my-2">
-              <NavLink to="/admin/createproductform" className="text-black">
-                Crear
-              </NavLink>
-            </li> */}
-            {/* <li className="max-md:mx-4 max-md:my-2">
-              <NavLink
-                to="https://moda-market-production.up.railway.app/modamarket/store/home/"
-                className="text-black"
-              >
-                API product
-              </NavLink>
-            </li> */}
           </ul>
         </div>
       </header>
-
       <ModalForm isVible={showModal} onClose={() => setShowModal(false)} />
     </>
   );

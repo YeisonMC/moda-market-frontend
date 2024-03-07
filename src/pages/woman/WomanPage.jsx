@@ -12,7 +12,6 @@ const WomanPage = () => {
       <nav className="prueba max-lg:flex max-lg:flex-col pt-8">
         <div className="px-4 py-2 max-md:px-0 max-md:mb-4 xl:bg-white lg:bg-white0  sm:bg-white bg-white">
           {/* //TODO: SE PONER name="info" PARA QUE SOLO SE PUEDA DAR UN SOLO DETAILS*/}
-
           <details>
             <summary className="py-2 flex justify-between">
               <p>Categoría</p>
@@ -120,7 +119,7 @@ const WomanPage = () => {
                 </div>
               </div>
             </div>
-            <div className=" transform  bg-white shadow-md hover:shadow-lg">
+            <div className="bg-white shadow-md hover:shadow-lg">
               <img
                 className="w-full object-cover object-center"
                 src="https://topitop.vteximg.com.br/arquivos/ids/338612-302-385/1980908_2.jpg?v=638436321340000000"
@@ -146,7 +145,7 @@ const WomanPage = () => {
                 </div>
               </div>
             </div>
-            <div className=" transform overflow-hidden bg-white shadow-md hover:shadow-lg">
+            <div className="overflow-hidden bg-white shadow-md hover:shadow-lg">
               <img
                 className="w-full object-cover object-center"
                 src="https://topitop.vteximg.com.br/arquivos/ids/338612-302-385/1980908_2.jpg?v=638436321340000000"
