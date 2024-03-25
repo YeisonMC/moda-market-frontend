@@ -29,7 +29,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="pt-4">
+      <div className="pt-4 ">
         <BannerSwiper />
       </div>
       <div className="pt-6">
@@ -41,39 +41,8 @@ const HomePage = () => {
             último en moda y las tendencias del momento.
           </p>
         </div>
-        {/* <h1> {store.length}</h1> */}
-        {/* <div className="mt-8 grid grid-cols-2 max-md:bg-fuchsia-200 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto sm:max-w-xl lg:max-w-3xl xl:max-w-5xl">
-          {store.map((store) => (
-            <div className="">
-              {loading ? (
-                <Skeleton />
-              ) : (
-                <Link to={`/product/${store.id}`} key={store.id}>
-                  <div className="bg-white shadow overflow-hidden h-full">
-                    <div className="">
-                      <img
-                        className="w-full"
-                        src={store.imagen}
-                        alt={store.nombre}
-                      />
-                    </div>
-                    <div className="p-4">
-                      <h3 className="font-bold text-xl mb-2">{store.nombre}</h3>
-                      <p className="text-gray-500 text-sm text-dispers">
-                        {store.descripcion}
-                      </p>
-                      <p className="font-bold mt-2">{store.precio}</p>
-                    </div>
-                  </div>
-                </Link>
-              )}
-            </div>
-            // target="_blank"
-          ))}
-        </div> */}
         <div className="mt-8 grid grid-cols-2  sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto sm:max-w-xl lg:max-w-3xl xl:max-w-5xl">
           {store.map((store) => (
-            // <div className="flex">
             <div key={store.id}>
               {loading ? (
                 <Skeleton />
@@ -106,45 +75,6 @@ const HomePage = () => {
             </div>
           ))}
         </div>
-
-        {/* <div className="mt-8 grid grid-cols-2 max-md:bg-fuchsia-200 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto sm:max-w-xl lg:max-w-3xl xl:max-w-5xl">
-          {store.map((store) => (
-            <div className="flex">
-              {loading ? (
-                <Skeleton />
-              ) : (
-                <Link
-                  to={`/product/${store.id}`}
-                  key={store.id}
-                  className="flex-1"
-                >
-                  <div className="bg-white shadow overflow-hidden h-full flex flex-col justify-between">
-                    <div>
-                      <div>
-                        <img
-                          className="w-full"
-                          src={store.imagen}
-                          alt={store.nombre}
-                        />
-                      </div>
-                      <div className="p-4">
-                        <h3 className="font-bold text-xl mb-2">
-                          {store.nombre}
-                        </h3>
-                        <p className="text-gray-500 text-sm text-dispers">
-                          {store.descripcion}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="p-4">
-                      <p className="font-bold">{store.precio}</p>
-                    </div>
-                  </div>
-                </Link>
-              )}
-            </div>
-          ))}
-        </div> */}
       </div>
 
       {/* <div className="">{loading ? <Skeleton /> : <HomeProductGet />}</div> */}

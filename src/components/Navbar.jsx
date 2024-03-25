@@ -13,7 +13,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <header className="absolute top-0 left-0 w-full bg-white shadow-md">
+      <header className="absolute top-0 left-0 w-full bg-white shadow-md z-10">
         <div className="flex items-center justify-between mx-10 py-4 max-md:mx-4">
           <NavLink to="/">
             <img src={ModaMarket} alt="" />
