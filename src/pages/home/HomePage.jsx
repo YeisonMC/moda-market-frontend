@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import "../assets/styles/home.css";
-import HomeProductGet from "../hooks/HomeProductGet";
-import Skeleton from "./woman/Skeleton";
+import "../../assets/styles/home.css";
+import HomeProductGet from "../../hooks/HomeProductGet";
+import Skeleton from "../woman/Skeleton";
+import BannerSwiper from "./components/BannerSwiper";
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
@@ -19,7 +20,8 @@ const HomePage = () => {
   useEffect(() => {
     axios
       .get(
-        "https://moda-market-production.up.railway.app/modamarket/store/home"
+        "http://localhost:3000/modamarket/store/home"
+        // "https://moda-market-production.up.railway.app/modamarket/store/home"
       )
       .then((response) => setStore(response.data))
       .catch((error) => console.error("Error fetching data:", error));
@@ -27,7 +29,10 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="pt-10">
+      <div className="pt-4">
+        <BannerSwiper />
+      </div>
+      <div className="pt-6">
         <div className="text-center">
           <h1 className="font-extrabold text-3xl">La Colección De La Semana</h1>
           <p className="mt-4 md:w-7/12 mx-auto">
@@ -66,7 +71,7 @@ const HomePage = () => {
             // target="_blank"
           ))}
         </div> */}
-        <div className="mt-8 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto sm:max-w-xl lg:max-w-3xl xl:max-w-5xl">
+        <div className="mt-8 grid grid-cols-2  sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto sm:max-w-xl lg:max-w-3xl xl:max-w-5xl">
           {store.map((store) => (
             // <div className="flex">
             <div key={store.id}>

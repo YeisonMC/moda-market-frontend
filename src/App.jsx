@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/home/HomePage";
 import Footer from "./components/Footer";
 import WomanPage from "./pages/woman/WomanPage.jsx";
 import ManPage from "./pages/man/ManPage.jsx";

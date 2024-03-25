@@ -25,7 +25,8 @@ const ProductId = () => {
   useEffect(() => {
     axios
       .get(
-        `https://moda-market-production.up.railway.app/modamarket/store/home/get/${productId}`
+        `http://localhost:3000/modamarket/store/home/get/${productId}`
+        // `https://moda-market-production.up.railway.app/modamarket/store/home/get/${productId}`
       )
       .then((response) => setProduct(response.data))
       .catch((error) => console.error("Error fetching product data:", error));
